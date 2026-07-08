@@ -1,0 +1,10 @@
+{
+  "name": "db-helper",
+  "version": "1.0.0",
+  "description": "Database optimization and query assistance plugin with automatic security enforcement and best practices",
+  "hooks": "./hooks/claude-codex-hooks.json",
+  "author": {
+    "name": "Puja Agarwal",
+    "url": "https://github.com/pujaagarwal5263"
+  }
+}
