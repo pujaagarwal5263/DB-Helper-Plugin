@@ -12,7 +12,7 @@ const path = require('path');
 const PLUGIN_ROOT = process.env.CLAUDE_PLUGIN_ROOT || __dirname;
 
 // Load the generate-query skill
-const generateQueryPath = path.join(PLUGIN_ROOT, 'skills/generate-query.md');
+const generateQueryPath = path.join(PLUGIN_ROOT, 'skills/generate-query/generate-query.md');
 let generateQueryPrinciples = '';
 
 try {
