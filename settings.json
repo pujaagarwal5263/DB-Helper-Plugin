@@ -1,0 +1,105 @@
+{
+  "version": 1,
+  "name": "db-helper",
+  "description": "Database optimization and query assistance plugin with skills and security hooks",
+  "author": "Your Name",
+  "skills": [
+    {
+      "name": "review",
+      "description": "Review database queries and schema for indexing and optimization opportunities",
+      "file": "skills/review.md"
+    },
+    {
+      "name": "suggest",
+      "description": "Suggest database schema design based on best practices and project requirements",
+      "file": "skills/suggest.md"
+    },
+    {
+      "name": "query-scores",
+      "description": "Evaluate and score database queries on optimization and best practices",
+      "file": "skills/query-scores.md"
+    },
+    {
+      "name": "generate-query",
+      "description": "Universal principles for generating optimized database queries - ALWAYS follow these when writing queries",
+      "file": "skills/generate-query.md",
+      "universal": true
+    },
+    {
+      "name": "analyze-table",
+      "description": "Perform deep analysis of a specific database table structure and usage patterns",
+      "file": "skills/analyze-table.md"
+    },
+    {
+      "name": "migration-plan",
+      "description": "Generate safe migration scripts for database schema changes",
+      "file": "skills/migration-plan.md"
+    },
+    {
+      "name": "explain-plan",
+      "description": "Parse and explain query execution plans to identify performance bottlenecks",
+      "file": "skills/explain-plan.md"
+    }
+  ],
+  "settings": {
+    "query_quality_threshold": 6.0,
+    "strict_mode": false,
+    "auto_rewrite_queries": false,
+    "verbose_output": true,
+    "enable_learning": true,
+    "environment": "development",
+    "security": {
+      "blocked_patterns": [
+        "\\.env$",
+        "\\.pem$",
+        "\\.key$",
+        "\\.crt$",
+        "id_rsa",
+        "id_ed25519",
+        "sudo",
+        "rm -rf",
+        "rm -r /",
+        "dd if=",
+        "git push (main|master)",
+        "DROP DATABASE",
+        "DROP TABLE",
+        "TRUNCATE"
+      ],
+      "allowed_patterns": [
+        "\\.(js|py|ts|java|go|rs|rb|php)$",
+        "\\.(md|txt|rst|json|yaml|yml)$",
+        "package\\.json",
+        "tsconfig\\.json",
+        "\\.gitignore"
+      ],
+      "confirmation_required": [
+        "git push",
+        "rm -r",
+        "DELETE",
+        "UPDATE",
+        "ALTER TABLE",
+        "chmod",
+        "chown"
+      ]
+    }
+  },
+  "compatibility": {
+    "databases": [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite",
+      "SQL Server",
+      "Oracle"
+    ],
+    "frameworks": [
+      "Raw SQL",
+      "ActiveRecord",
+      "Sequelize",
+      "TypeORM",
+      "Knex",
+      "Doctrine",
+      "SQLAlchemy",
+      "Prisma"
+    ]
+  }
+}
