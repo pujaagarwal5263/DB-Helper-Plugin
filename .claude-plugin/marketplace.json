@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "ponytail",
+      "name": "db-helper",
       "description": "Database optimization and query assistance plugin with automatic security enforcement and best practices",
       "source": "./",
       "category": "productivity"
